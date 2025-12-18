@@ -1,0 +1,41 @@
+University ERP System (Java + Swing)
+====================================
+
+PREREQUISITES:
+1. Java Development Kit (JDK) 21 or higher.
+2. MySQL Server (running on localhost:3306).
+3. Maven (for dependency management).
+
+DATABASE SETUP:
+1. Open your MySQL client (Workbench or CLI).
+2. Create two databases: 'auth_db' and 'erp'.
+3. Import the provided SQL dumps located in 'Seed Scripts' folder:
+   - Import 'auth_seed.sql' into 'auth_db'.
+   - Import 'erp_seed.sql' into 'erp'.
+4. Verify DB Credentials in 'src/main/java/edu/univ/erp/service/erp.java' and 'MySQL.java':
+   - Default User: root
+   - Default Pass: CPS@root009 (Change these in the code according to your local mysql setup)
+
+The backup files included by default contain users, courses and sections already created by us but these files will be overwritten when backup function is used by an admin user. In that case, the included Seed Scripts can be imported into the databases.
+
+
+HOW TO RUN:
+1. Open the project in your IDE (IntelliJ/Eclipse/VS Code).
+2. Reload Maven changes to ensure dependencies (FlatLaf, BCrypt, PDFBox, MySQL Connector) are downloaded.
+3. Run the main class: 'edu.univ.erp.Main'.
+
+DEFAULT CREDENTIALS (Role / Username / Password):
+-------------------------------------------------
+1. ADMIN      : admin   / password
+2. INSTRUCTOR : dhruv   / 123
+3. STUDENT    : harsh   / 123
+4. STUDENT    : tom     / 123
+4. STUDENT    : stu1     / 123
+4. STUDENT    : stu2     / 123
+4. STUDENT    : stu3     / 123
+
+NOTE ON FIRST RUN:
+- Log in as 'admin'.
+- Go to "Active Semester & Deadline" on the dashboard.
+- Select "Monsoon" "2025" and a future date.
+- Click "Set Active & Update" to initialize the semester settings.

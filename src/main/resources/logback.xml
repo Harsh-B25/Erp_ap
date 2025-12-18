@@ -1,0 +1,17 @@
+<configuration>
+
+    <!-- File Appender -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/app.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date %-5level %logger - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Root logger: send logs ONLY to file -->
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
